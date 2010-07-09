@@ -1,0 +1,55 @@
+/*
+ *	CSS CACHE: Core Styling
+ *
+ */
+
+/*	Server Side Imports
+	----------------------------------- */
+
+	@server import url("modules/reset.css");
+	@server import url("modules/font-face.css");
+
+
+/*	Define Constants
+	----------------------------------- */
+	
+	@constants {
+		linkcolor: #ab031d;
+		sitefont: MyCustomFont, Helvetica, Arial, sans-serif;
+	}
+
+
+/*	Common Base Sets
+	----------------------------------- */
+	
+	@base(base-font-spec) {
+		font-family: const(sitefont);
+		font-size: 12px;
+		line-height: 1.4;
+	}
+
+
+/*	Core styles
+	----------------------------------- */
+
+	html {
+		based-on: base(base-font-spec);
+	}
+
+	body {
+		margin: 0;
+		min-width: 990px;
+		padding: 0;
+	}
+
+	a, 
+	a:link, 
+	a:active, 
+	a:visited {
+		color: const(linkcolor);
+		text-decoration: underline;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
