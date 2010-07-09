@@ -17,12 +17,11 @@
  */
 class BasedonPlugin extends CssCachePlugin
 {
-	function process($css)
+	public function process($css)
 	{
 		$bases = array();
 		if (preg_match_all('#@base\(([^\s\{]+)\)\s*\{(\s*[^\}]+)\s*\}\s*#i', $css, $matches))
 		{
-			// For each declaration
 			foreach ($matches[0] as $key => $base)
 			{
 				// Remove the @base declaration
@@ -45,7 +44,7 @@ class BasedonPlugin extends CssCachePlugin
 		return $css;
 	}
 
-	function replace_bases($bases, $css, $current_base_name = false)
+	private function replace_bases($bases, $css, $current_base_name = false)
 	{
 		// As long as there's based-on properties in the CSS string
 		// Get all instances
@@ -70,7 +69,6 @@ class BasedonPlugin extends CssCachePlugin
 
 					$styles .= $bases[$base_name];
 				}
-
 				// Insert styles this is based on
 				$css = str_replace($based_on, $styles, $css);
 			}

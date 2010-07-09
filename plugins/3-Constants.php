@@ -2,7 +2,7 @@
 
 class ConstantsPlugin extends CssCachePlugin
 {
-	function pre_process($css)
+	public function pre_process($css)
 	{
 		$constants = array();
 		if (preg_match_all('#@constants\s*\{\s*([^\}]+)\s*\}\s*#i', $css, $matches)) {

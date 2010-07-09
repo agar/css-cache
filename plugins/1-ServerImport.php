@@ -9,7 +9,7 @@
  */
 class ServerImportPlugin extends CssCachePlugin
 {
-	function pre_process($css)
+	public function pre_process($css)
 	{
 		$css_cache = CssCache::get_instance();
 		$imported = $css_cache->requested_files;
