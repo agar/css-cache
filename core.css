@@ -20,7 +20,7 @@
 		font-family: const(sitefont);
 		font-size: 12px;
 		line-height: 1.4;
-	}
+	}	
 
 /*	Standard Imports
 	----------------------------------- */
@@ -46,4 +46,3 @@
 	
 	@server import url("modules/print.css");
 
-	
