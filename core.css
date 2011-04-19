@@ -1,23 +1,17 @@
 /*
  *	CSS CACHE: Core Styling
- *
+ * 
  */
-
-/*	Server Side Imports
-	----------------------------------- */
-
-	@server import url("modules/reset.css");
-	@server import url("modules/font-face.css");
 
 
 /*	Define Constants
 	----------------------------------- */
 	
 	@constants {
-		linkcolor: #ab031d;
-		sitefont: MyCustomFont, Helvetica, Arial, sans-serif;
+		linkcolor: #aa1948;
+		selectioncolor: #aa1948;
+		sitefont: Helvetica, Arial, sans-serif;
 	}
-
 
 /*	Common Base Sets
 	----------------------------------- */
@@ -28,28 +22,28 @@
 		line-height: 1.4;
 	}
 
-
-/*	Core styles
+/*	Standard Imports
 	----------------------------------- */
 
-	html {
+	@server import url("modules/reset.css");
+
+	@server import url("modules/base.css");
+
+
+/*	Page structure
+	----------------------------------- */
+
+	article {
 		based-on: base(base-font-spec);
 	}
 
-	body {
-		margin: 0;
-		min-width: 990px;
-		padding: 0;
-	}
+/*	Import Helpers & Overrides
+	----------------------------------- */
 
-	a, 
-	a:link, 
-	a:active, 
-	a:visited {
-		color: const(linkcolor);
-		text-decoration: underline;
-	}
+	@server import url("modules/helpers.css");
+	
+	@server import url("modules/media.css");
+	
+	@server import url("modules/print.css");
 
-	a:hover {
-		text-decoration: none;
-	}
+	

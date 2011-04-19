@@ -39,7 +39,7 @@
 			// load plugins
 			$this->load_plugins();
 
-			// wrk out files to cache
+			// work out files to cache
 			$files = explode(',', $_SERVER['QUERY_STRING']);
 			$this->css_dir = dirname(__FILE__).'/';
 			$this->most_recent_mtime = 0;
