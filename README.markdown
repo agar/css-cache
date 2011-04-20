@@ -51,17 +51,19 @@ Define a base set of css properties and apply them to other selectors easily. Fo
 
 Will be compiled into:
 
-	body {
-		font-family: Arial, sans-serif;
-		font-size: 12px;
-		line-height: 1.4;
-	}
-	input {
-		font-family: Arial, sans-serif;
-		font-size: 12px;
-		line-height: 1.4;
-		color: #444;
-	}
+``` css
+body {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	line-height: 1.4;
+}
+input {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	line-height: 1.4;
+	color: #444;
+}
+```
 
 ### 3. Constants
 
